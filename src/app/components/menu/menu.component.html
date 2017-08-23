@@ -1,0 +1,14 @@
+
+<md-toolbar>
+  <span>Angular Material</span>
+  <span class="example-spacer"></span>
+  <button md-button [mdMenuTriggerFor]="converterMenu"><md-icon>menu</md-icon></button>
+</md-toolbar>
+
+<md-menu #converterMenu="mdMenu">
+  <button md-menu-item routerLink="/"> Home</button>
+  <md-list></md-list>
+  <md-divider></md-divider>
+  <button md-menu-item routerLink="/weight"> Weight</button>
+  <button md-menu-item routerLink="/currency"> Currency</button>
+</md-menu>
