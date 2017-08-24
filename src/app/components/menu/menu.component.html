@@ -4,6 +4,7 @@
   <span class="example-spacer"></span>
   <button md-button [mdMenuTriggerFor]="converterMenu"><md-icon>menu</md-icon></button>
 </md-toolbar>
+<br>
 
 <md-menu #converterMenu="mdMenu">
   <button md-menu-item routerLink="/"> Home</button>
@@ -11,4 +12,5 @@
   <md-divider></md-divider>
   <button md-menu-item routerLink="/weight"> Weight</button>
   <button md-menu-item routerLink="/currency"> Currency</button>
+  <button md-menu-item routerLink="/temp"> Temperature</button>
 </md-menu>

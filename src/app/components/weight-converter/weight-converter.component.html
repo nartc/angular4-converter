@@ -1,3 +1,22 @@
-<p>
-  weight-converter works!
-</p>
+<md-input-container class="example-full-width">
+  <input mdInput type="number" id="lbsInput" name="lbsInput" [ngModel]="lbsInput" (ngModelChange)="onChange($event)" placeholder="Enter weight in lbs..">
+</md-input-container>
+
+<md-card>
+  <md-card-title>Kilograms</md-card-title>
+  <md-card-content>{{kgsOutput | number:'.1-4'}} kg</md-card-content>
+</md-card>
+<md-list></md-list>
+<md-divider></md-divider>
+
+<md-card>
+  <md-card-title>Grams</md-card-title>
+  <md-card-content>{{grsOutput | number:'.1-4'}} gr</md-card-content>
+</md-card>
+<md-list></md-list>
+<md-divider></md-divider>
+
+<md-card>
+  <md-card-title>Ounces</md-card-title>
+  <md-card-content>{{ozOutput | number:'.1-4'}} oz</md-card-content>
+</md-card>

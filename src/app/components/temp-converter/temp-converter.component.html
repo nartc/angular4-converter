@@ -1,0 +1,10 @@
+<md-input-container class="example-full-width">
+  <input mdInput type="number" id="fInput" name="fInput" [ngModel]="fInput" (ngModelChange)="onChange($event)" placeholder="Enter °F..">
+</md-input-container>
+
+<md-card>
+  <md-card-title>Celsius</md-card-title>
+  <md-card-content>{{cOutput | number:'.1-1'}} °C</md-card-content>
+</md-card>
+
+

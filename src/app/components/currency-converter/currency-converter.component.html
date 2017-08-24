@@ -1,3 +1,16 @@
-<p>
-  currency-converter works!
-</p>
+<md-input-container class="example-full-width">
+  <input mdInput type="number" id="usdInput" name="usdInput" [ngModel]="usdInput" (ngModelChange)="onChange($event)" placeholder="Enter USD amount..">
+</md-input-container>
+
+<md-card>
+  <md-card-title>VND</md-card-title>
+  <md-card-content>{{vndOutput | currency:'VND':true}}</md-card-content>
+</md-card>
+<md-list></md-list>
+<md-divider></md-divider>
+
+<md-card>
+  <md-card-title>EUR</md-card-title>
+  <md-card-content>{{eurOutput | currency:'EUR':true}}</md-card-content>
+</md-card>
+
