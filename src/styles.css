@@ -17,6 +17,9 @@ body {
 .mat-input-placeholder {
     color: white;
 }
+.mat-select-placeholder {
+    color: white;
+}
 
 .mat-input-ripple {
     background-color: #158da7

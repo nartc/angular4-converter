@@ -1,8 +1,23 @@
+<md-card>
+  <md-card-content style="text-align: center;">Currency Exchange</md-card-content>
+</md-card>
+
 <md-input-container class="example-full-width">
-  <input mdInput type="number" id="usdInput" name="usdInput" [ngModel]="usdInput" (ngModelChange)="onChange($event)" placeholder="Enter USD amount..">
+  <input mdInput type="number" id="fInput" name="fInput" [ngModel]="fInput" (ngModelChange)="on1stChange($event)">
 </md-input-container>
 
-<md-card>
+<md-select placeholder="Unit" floatPlaceholder="never" (change)="onFirstUnitChange($event)">
+  <md-option *ngFor="let unit of units" [value]="unit.code">{{unit.name}}</md-option>
+</md-select>
+
+<md-input-container class="example-full-width">
+  <input mdInput type="number" id="sInput" name="sInput" [ngModel]="sInput" (ngModelChange)="on2ndChange($event)">
+</md-input-container>
+<md-select [placeholder]="placeHolder" floatPlaceholder="never" [disabled]="!pickedFirst" (change)="onSecondUnitChange($event)">
+  <md-option *ngFor="let unit of units" [value]="unit.code">{{unit.name}}</md-option>
+</md-select>
+
+<!-- <md-card>
   <md-card-title>VND</md-card-title>
   <md-card-content>{{vndOutput | currency:'VND':true}}</md-card-content>
 </md-card>
@@ -12,5 +27,5 @@
 <md-card>
   <md-card-title>EUR</md-card-title>
   <md-card-content>{{eurOutput | currency:'EUR':true}}</md-card-content>
-</md-card>
+</md-card> -->
 
